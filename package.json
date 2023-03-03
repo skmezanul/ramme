@@ -10,7 +10,9 @@
     "prestart": "yarn build",
     "start": "electron app",
     "pack": "yarn build && build --dir",
-    "dist": "yarn build && build --ia32 --x64"
+    "dist": "yarn build && build --ia32 --x64",
+    "prepare": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "build": {
     "appId": "com.terkel.ramme",
@@ -49,11 +51,13 @@
     ]
   },
   "dependencies": {
-    "opencollective": "^1.0.3"
+    "opencollective": "^1.0.3",
+    "@snyk/protect": "latest"
   },
   "collective": {
     "type": "opencollective",
     "url": "https://opencollective.com/ramme",
     "logo": "https://opencollective.com/opencollective/logo.txt"
-  }
+  },
+  "snyk": true
 }
