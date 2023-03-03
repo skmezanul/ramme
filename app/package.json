@@ -27,6 +27,12 @@
     "first-run": "^1.2.0",
     "insight": "^0.10.1",
     "ms": "^2.1.1",
-    "os": "^0.1.1"
-  }
+    "os": "^0.1.1",
+    "@snyk/protect": "latest"
+  },
+  "scripts": {
+    "prepare": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
+  },
+  "snyk": true
 }
